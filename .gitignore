@@ -58,8 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-SkeletonSurvior/Library/
-SkeletonSurvior/Library/*
+SeletonSurvior/Library/
 
-SkeletonSurvior/Temp/
-SkeletonSurvior/Temp/*
+SeletonSurvior/Library/*
+
+SeletonSurvior/Temp/

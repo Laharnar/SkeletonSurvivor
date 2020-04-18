@@ -37,6 +37,6 @@ MonoBehaviour:
       value: {fileID: 11400000, guid: 4b7ab64a7d0245346841c40869f8501e, type: 2}
       useDefault: 0
       defaultValue: 0
-      log: 1
+      log: 0
     defaultValue: 0
-    log: 1
+    log: 0
