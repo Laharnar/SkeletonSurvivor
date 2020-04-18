@@ -436,6 +436,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 804398667}
   strength: 0.168
+  fullAimOnStart: 0
+  targetPositionOnStart:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: {x: 0, y: 0, z: 0}
+  distanceToTargetAtStart:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: 0
+    log: 0
+  onStartEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &82359709
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +541,9 @@ GameObject:
   - component: {fileID: 98486028}
   - component: {fileID: 98486029}
   - component: {fileID: 98486030}
+  - component: {fileID: 98486032}
+  - component: {fileID: 98486031}
+  - component: {fileID: 98486033}
   m_Layer: 0
   m_Name: IncomingMeteorShot
   m_TagString: Untagged
@@ -543,7 +559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98486027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.37630352, y: -2.3016233, z: -1.8540636}
+  m_LocalPosition: {x: -5.78, y: -4.6, z: -1.8540636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1088804650}
@@ -588,6 +604,103 @@ MonoBehaviour:
   OnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &98486031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98486027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444329b2287500942a0209c0ebec07e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: 4
+    log: 0
+  rotationSpeed:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: 1
+    log: 0
+  direction: {x: 0, y: 1, z: 0}
+  rotationDeg: {x: 0, y: 0, z: 0}
+  scaling: {x: 1, y: 1, z: 1}
+  lastRot: {x: 0, y: 0, z: 0}
+  expectedMove:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: {x: 0, y: 0, z: 0}
+  expectedRotation:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: {x: 0, y: 0, z: 0}
+  onPreMove:
+    m_PersistentCalls:
+      m_Calls: []
+  relativeTo:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: 1
+--- !u!114 &98486032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98486027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca4df55fad7e9b42840c91491d47434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 875619497}
+  strength: 0.004
+  fullAimOnStart: 1
+  targetPositionOnStart:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: {x: 0, y: 0, z: 0}
+  distanceToTargetAtStart:
+    value: {fileID: 11400000, guid: 4d6ae8ed085a4554e8a787f16759a870, type: 2}
+    useDefault: 0
+    defaultValue: 0
+    log: 0
+  onStartEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 98486033}
+        m_MethodName: Begin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &98486033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98486027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c57b10951dc9345b16bcf6da83d7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beginOnStart: 0
+  dieAfterTime:
+    value: {fileID: 11400000, guid: 4d6ae8ed085a4554e8a787f16759a870, type: 2}
+    useDefault: 0
+    defaultValue: 0
+    log: 0
 --- !u!1 &99859078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3527,6 +3640,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 804398667}
   strength: 0.045
+  fullAimOnStart: 0
+  targetPositionOnStart:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: {x: 0, y: 0, z: 0}
+  distanceToTargetAtStart:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: 0
+    log: 0
+  onStartEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2119832850
 GameObject:
   m_ObjectHideFlags: 0
