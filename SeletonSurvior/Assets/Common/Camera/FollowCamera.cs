@@ -14,6 +14,11 @@ public class FollowCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(target == null)
+        {
+            Debug.Log("Followed target is missing.");
+            return;
+        }
         Vector3 v = Vector3.Lerp(transform.position, target.position, followStrength);
         Vector3 dir = target.position - transform.position;
         dir = controller.LimitDir(dir);
