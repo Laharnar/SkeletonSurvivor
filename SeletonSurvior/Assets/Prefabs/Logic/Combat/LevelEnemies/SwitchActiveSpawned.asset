@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f7a15398c93ad43834de846f084aab, type: 3}
+  m_Name: SwitchActiveSpawned
+  m_EditorClassIdentifier: 
+  activeId:
+    value: {fileID: 11400000, guid: 15c631a371365eb48bc6395eb6b3d018, type: 2}
+    useDefault: 0
+    defaultValue: 0
+  cases:
+  - onSuccess1: {fileID: 0}
+    onSuccess2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 5bb5cc1c27a9b234bb6e47032c521887, type: 2}
+          m_MethodName: SetTransform
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 979db14eb4ae07e4486c2c122d6eb236,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: TransformRef, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    skipBoth: 0
+  - onSuccess1: {fileID: 0}
+    onSuccess2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 5bb5cc1c27a9b234bb6e47032c521887, type: 2}
+          m_MethodName: SetTransform
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 5ed16919667653940a934a04f14ab145,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: TransformRef, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    skipBoth: 0
+  - onSuccess1: {fileID: 0}
+    onSuccess2:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 5bb5cc1c27a9b234bb6e47032c521887, type: 2}
+          m_MethodName: SetTransform
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 2585dd875475c6148a2caa5c81cd2357,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: TransformRef, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    skipBoth: 0

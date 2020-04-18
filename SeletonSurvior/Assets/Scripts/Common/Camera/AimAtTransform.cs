@@ -6,7 +6,7 @@ using UnityEngine.XR.WSA.Input;
 
 public class AimAtTransform : MonoBehaviour
 {
-    public Transform target;
+    public TransformVarValue target;
 
     [Range(0.0f, 1.0f)]
     public float strength;
@@ -20,19 +20,24 @@ public class AimAtTransform : MonoBehaviour
 
     void Start()
     {
+        if (target == null)
+            return;
+
         if (fullAimOnStart)
         {
-            transform.up = target.position - transform.position;
+            transform.up = target.Value.position - transform.position;
         }
 
-        targetPositionOnStart.Value = target.position;
-        distanceToTargetAtStart.Value = Vector2.Distance(target.position, transform.position);
+        targetPositionOnStart.Value = target.Value.position;
+        distanceToTargetAtStart.Value = Vector2.Distance(target.Value.position, transform.position);
         onStartEnd?.Invoke();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.up = Vector3.Lerp(transform.up, (target.position - transform.position).normalized, strength);
+
+        if(target!= null)
+        transform.up = Vector3.Lerp(transform.up, (target.Value.position - transform.position).normalized, strength);
     }
 }

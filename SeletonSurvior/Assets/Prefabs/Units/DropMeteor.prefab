@@ -86,7 +86,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca4df55fad7e9b42840c91491d47434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target:
+    target: {fileID: 11400000, guid: d77a19f56b7768d48b254bff6ca98794, type: 2}
+    useDefault: 0
+    defaultValue: {fileID: 0}
   strength: 0.004
   fullAimOnStart: 1
   targetPositionOnStart:
