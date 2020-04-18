@@ -7,10 +7,21 @@ public class SetScale : MonoBehaviour
     public RectVarValue randomAreaAround;
 
     [Header("Controlled")]
+    public BoolVarValue useControlled;
     public IntVarValue active;
     public Vector3[] relativeScales;
     public TransformVarValue target;
 
+    [Header("Prefab floats")]
+    public BoolVarValue usePrefabs;
+    public FloatVarRef fx;
+    public FloatVarRef fy;
+    public FloatVarRef fz;
+    you were working on getting hp ready
+        to scale down when hp is reduced
+        hp doesnt ahve calulcation on get damage
+        to update ui with set scale
+        it's to linked yet
     void Awake()
     {
         target.Value = transform;
@@ -27,9 +38,13 @@ public class SetScale : MonoBehaviour
         {
             target.Value.localScale = NewRandom(randomAreaAround.Value);
         }
-        else
+        else if(useControlled.Value)
         {
             target.Value.localScale = relativeScales[active.Value];
+        }
+        else if(usePrefabs.Value)
+        {
+            target.Value.localScale = new Vector3(fx.Value, fy.Value, fz.Value);
         }
     }
 
