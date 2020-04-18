@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c868f9f31dff2f45961c7f63f322bf9, type: 3}
+  m_Name: InputXtoDirectionX
+  m_EditorClassIdentifier: 
+  from:
+    useInt: 0
+    i:
+      value: {fileID: 0}
+      useDefault: 1
+      defaultValue: 0
+    useFloat: 1
+    f:
+      value: {fileID: 11400000, guid: 031ed0e2870f25440b90043c6f816426, type: 2}
+      useDefault: 0
+      defaultValue: 0
+      log: 0
+    defaultValue: 0
+    log: 0
+  into:
+    useInt: 0
+    i:
+      value: {fileID: 0}
+      useDefault: 1
+      defaultValue: 0
+    useFloat: 1
+    f:
+      value: {fileID: 11400000, guid: 4b7ab64a7d0245346841c40869f8501e, type: 2}
+      useDefault: 0
+      defaultValue: 0
+      log: 1
+    defaultValue: 0
+    log: 1
