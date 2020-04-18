@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19eda7678c412d24dbb73452476a02bd, type: 3}
+  m_Name: ApplyDirectionsOnMovement
+  m_EditorClassIdentifier: 
+  numberX:
+    useInt: 0
+    i:
+      value: {fileID: 0}
+      useDefault: 1
+      defaultValue: 0
+    useFloat: 1
+    f:
+      value: {fileID: 11400000, guid: 4b7ab64a7d0245346841c40869f8501e, type: 2}
+      useDefault: 0
+      defaultValue: 0
+    defaultValue: 0
+  numberY:
+    useInt: 0
+    i:
+      value: {fileID: 0}
+      useDefault: 1
+      defaultValue: 0
+    useFloat: 1
+    f:
+      value: {fileID: 11400000, guid: 798c2cb086e762847aec192a6ac3b17f, type: 2}
+      useDefault: 0
+      defaultValue: 0
+    defaultValue: 0
+  numberZ:
+    useInt: 0
+    i:
+      value: {fileID: 0}
+      useDefault: 1
+      defaultValue: 0
+    useFloat: 1
+    f:
+      value: {fileID: 0}
+      useDefault: 0
+      defaultValue: 0
+    defaultValue: 0
+  numberXToX: 1
+  numberYToY: 1
+  numberZToZ: 0
+  xToNumberX: 0
+  yToNumberY: 0
+  zToNumberZ: 0
+  vector:
+    vec:
+      value: {fileID: 11400000, guid: 6eac9a77b21b2514383aeaba25fc137c, type: 2}
+      useDefault: 0
+      defaultValue: {x: 0, y: 0, z: 0}
