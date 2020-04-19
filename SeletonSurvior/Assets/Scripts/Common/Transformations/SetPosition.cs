@@ -2,41 +2,41 @@
 
 public class SetPosition:MonoBehaviour
 {
-    [Header("Random")]
-    public BoolVarValue setRandom;
-    public RectVarValue randomAreaAround;
+    public TransformVarValue target;
+    public bool useInUpdate = true;
+    public LerpStrength lerping;
 
+    public RandomInArea rng;
     [Header("Controlled")]
     public IntVarValue active;
     public Vector3[] relativePositions;
-    public TransformVarValue target;
 
-    void Awake()
+    private void Update()
     {
-        target.Value = transform;
+        if(useInUpdate)
+            SetToSelectedPosition();
     }
 
     public void Next()
     {
-        active.Value = (active.Value+1)%relativePositions.Length;
+        if(rng.useRandom.Value)
+           rng.NextRandom();
+        else if(relativePositions.Length != 0) 
+            active.Value = (active.Value+1)%relativePositions.Length;
     }
 
     public void SetToSelectedPosition()
     {
-        if (setRandom.Value)
+        if (rng.useRandom.Value)
         {
-            target.Value.localPosition = NewRandom(randomAreaAround.Value);
+            target.Value.localPosition = lerping.ApplyIfUsed( target.Value.localPosition, rng.Value);
         }
         else
         {
-            target.Value.localPosition = relativePositions[active.Value];
+            target.Value.localPosition = lerping.ApplyIfUsed(
+                target.Value.localPosition,
+                relativePositions[active.Value]);
         }
     }
 
-    Vector2 NewRandom(Rect rect)
-    {
-        return new Vector2(
-            randomAreaAround.Value.x + Random.value * randomAreaAround.Value.width,
-            randomAreaAround.Value.y + Random.value * randomAreaAround.Value.height);
-    }
 }
