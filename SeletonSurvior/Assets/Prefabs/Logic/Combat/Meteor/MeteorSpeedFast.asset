@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd08618d94b758542a6c03ac7115bb76, type: 3}
   m_Name: MeteorSpeedFast
   m_EditorClassIdentifier: 
-  value1: 13
+  value1: 12

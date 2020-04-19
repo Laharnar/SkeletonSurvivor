@@ -82,6 +82,9 @@ MonoBehaviour:
     defaultValue: 1
   OnDamaged:
     m_PersistentCalls:
+      m_Calls: []
+  OnDestroyed:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7556901073624515660}
         m_MethodName: SpawnNewAtSpawnPoint
@@ -94,9 +97,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnDestroyed:
-    m_PersistentCalls:
-      m_Calls: []
   checkEveryFrame: 1
 --- !u!114 &6701899061843271526
 MonoBehaviour:

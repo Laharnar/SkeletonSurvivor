@@ -39,6 +39,7 @@ public class Health : MonoBehaviour {
         if (health.Value <= 0)
         {
             destroyedFromHealth = true;
+            OnDestroyed.Invoke();
             Destroy(gameObject);
         }
     }
@@ -50,16 +51,10 @@ public class Health : MonoBehaviour {
             if (health.Value <= 0)
             {
                 destroyedFromHealth = true;
+                OnDestroyed.Invoke();
                 Destroy(gameObject);
             }
         }
     }
 
-    private void OnDestroy()
-    {
-        if (destroyedFromHealth)
-        {
-            OnDestroyed.Invoke();
-        }
-    }
 }
