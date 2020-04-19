@@ -139,17 +139,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4219977265646615789}
-        m_MethodName: Begin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &7809205518977618494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,12 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c57b10951dc9345b16bcf6da83d7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beginOnStart: 0
-  useDieAfterTimeAtBegin: 1
+  beginOnStart: 1
   dieAfterTime:
     value: {fileID: 11400000, guid: 2a04223a85e3a9246aeb5aa2cd5fc46c, type: 2}
-    useDefault: 0
-    defaultValue: 0
+    useDefault: 1
+    defaultValue: 10
     log: 0
 --- !u!1 &2430288838857030244
 GameObject:
@@ -273,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dd578b501840841a023011ec736596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -10
+  damage: -5
 --- !u!114 &6086075239959669698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +291,9 @@ MonoBehaviour:
     op: 0
     skip: 0
     valueOnSkip: 1
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
   log: 1
 --- !u!114 &300485686304791708
 MonoBehaviour:
@@ -527,6 +518,9 @@ MonoBehaviour:
     op: 0
     skip: 0
     valueOnSkip: 1
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
   log: 1
 --- !u!114 &672728086588049835
 MonoBehaviour:
@@ -655,6 +649,18 @@ PrefabInstance:
     - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: moveWithTransform
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: startDelay.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: startDelay.maxCurve.m_Curve.Array.data[1].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
