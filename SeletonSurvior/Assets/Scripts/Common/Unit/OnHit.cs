@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OnHit : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class OnHit : MonoBehaviour {
     public RealtimePrefabs onHitRealtime;
 
     public ConditionGroup onHitIf;
+    public UnityEvent onHit;
 
     public bool log = false;
 
@@ -42,7 +44,10 @@ public class OnHit : MonoBehaviour {
                 onHitSaveOtherAllianceInto.value = o.selfAlliance.Value;
             }
             if (onHitIf.IsTrue())
+            {
+                onHit?.Invoke();
                 sender.OnHit(o);
+            }
         }
     }
 
@@ -77,6 +82,7 @@ public class OnHit : MonoBehaviour {
             }
             if (onHitIf.IsTrue())
             {
+                onHit?.Invoke();
                 sender.OnHit(o);
                 if (log) logging += " - Success";
             }
