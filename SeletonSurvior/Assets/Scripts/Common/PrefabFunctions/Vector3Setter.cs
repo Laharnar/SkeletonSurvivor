@@ -4,6 +4,8 @@
 public class Vector3Setter
 {
     [SerializeField] Vec3VarRef vec;
+
+
     public void SetToX(float x)
     {
         vec.Value = new Vector3(x, vec.Value.y, vec.Value.z);

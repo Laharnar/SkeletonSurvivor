@@ -10,6 +10,7 @@ public class FollowCamera : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float followStrength = 0.8f;
     public VectorController controller;
+    public float speed = 30;
 
     // Update is called once per frame
     void Update()
@@ -22,6 +23,6 @@ public class FollowCamera : MonoBehaviour
         Vector3 v = Vector3.Lerp(transform.position, target.position, followStrength);
         Vector3 dir = target.position - transform.position;
         dir = controller.LimitDir(dir);
-        transform.Translate(dir * Time.deltaTime * 30);
+        transform.Translate(dir * Time.deltaTime * speed);
     }
 }

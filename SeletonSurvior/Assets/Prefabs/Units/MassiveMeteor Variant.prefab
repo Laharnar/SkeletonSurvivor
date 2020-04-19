@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 3713082438241777677, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6,
         type: 3}
       propertyPath: m_Name
-      value: MassiveMeteor
+      value: MassiveMeteor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6629079044837947864, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6,
         type: 3}
@@ -38,6 +38,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 859a494f7922ed444a9f2e1266552001,
         type: 2}
+    - target: {fileID: 7489478536116247350, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6,
+        type: 3}
+      propertyPath: damage
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7683434533807617152, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6,
         type: 3}
       propertyPath: target
@@ -133,10 +138,20 @@ PrefabInstance:
       propertyPath: health
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8619265283413792445, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6,
+        type: 3}
+      propertyPath: health.defaultValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619265283413792445, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6,
+        type: 3}
+      propertyPath: maxHealth.defaultValue
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8950707481085172540, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6,
         type: 3}
       propertyPath: damage
-      value: 1
+      value: -15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c9b709ba1d8ff046b4b01ff5b9211f6, type: 3}

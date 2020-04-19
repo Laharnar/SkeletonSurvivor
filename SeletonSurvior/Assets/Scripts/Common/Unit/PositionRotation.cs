@@ -10,6 +10,7 @@ public class PositionRotation : MonoBehaviour {
     public Vector3 rotationDeg;
     public Vector3 scaling = Vector3.one;
     public Vector3 lastRot;
+    public bool useDeltaTime = true;
 
     [Header("Modifications")]
     public Vec3VarRef expectedMove;
@@ -31,6 +32,11 @@ public class PositionRotation : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        ForcePositionRotationTick();
+    }
+
+    public void ForcePositionRotationTick()
+    {
         if (rig == null || relativeTo.Value == Space.World)
         {
             CalculateBasicMoveRotateScale();
@@ -41,6 +47,11 @@ public class PositionRotation : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        ForceFixedUpdateTick();
+    }
+
+    private void ForceFixedUpdateTick()
+    {
         if (rig != null && relativeTo.Value == Space.Self)
         {
             CalculateBasicMoveRotateScaleFixedUpdate();
@@ -50,8 +61,8 @@ public class PositionRotation : MonoBehaviour {
 
     private void CalculateBasicMoveRotateScale()
     {
-        moveAmount = direction * moveSpeed.Value * Time.deltaTime;
-        rotsAmount = rotationDeg * Time.deltaTime * rotationSpeed.Value;
+        moveAmount = direction * moveSpeed.Value * (useDeltaTime ? Time.deltaTime : 1f);
+        rotsAmount = rotationDeg * (useDeltaTime ? Time.deltaTime : 1f) * rotationSpeed.Value;
     }
 
     private void CalculateBasicMoveRotateScaleFixedUpdate()

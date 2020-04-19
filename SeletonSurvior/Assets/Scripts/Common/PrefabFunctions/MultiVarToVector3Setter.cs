@@ -15,6 +15,8 @@ public class MultiVarToVector3Setter : ScriptableObject
     [SerializeField] bool zToNumberZ;
     [SerializeField] Vector3Setter vector;
 
+    public Vector3 VecValue { get => vector.Value; }
+
     public void Activate()
     {
         if (numberXToX)

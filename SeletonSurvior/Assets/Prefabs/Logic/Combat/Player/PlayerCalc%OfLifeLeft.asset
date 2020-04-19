@@ -30,7 +30,7 @@ MonoBehaviour:
       log: 0
     defaultValue: 0
     log: 0
-  op: 2
+  op: 3
   b:
     useInt: 1
     i:

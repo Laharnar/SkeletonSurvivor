@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3493285839734511702}
   - component: {fileID: 3493285839734511701}
   m_Layer: 0
-  m_Name: GoingL-RSpawningDown
+  m_Name: SpawnL-RDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   relativeTo:
     value: {fileID: 0}
     useDefault: 1
-    defaultValue: 0
+    defaultValue: 1
 --- !u!1001 &3493285840198562737
 PrefabInstance:
   m_ObjectHideFlags: 0

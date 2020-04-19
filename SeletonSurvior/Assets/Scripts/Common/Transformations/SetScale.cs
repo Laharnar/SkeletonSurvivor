@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
+public class MyClass
+{
 
+}
 public class SetScale : MonoBehaviour
 {
     [Header("Random")]
@@ -12,19 +15,20 @@ public class SetScale : MonoBehaviour
     public Vector3[] relativeScales;
     public TransformVarValue target;
 
-    [Header("Prefab floats")]
-    public BoolVarValue usePrefabs;
-    public FloatVarRef fx;
-    public FloatVarRef fy;
-    public FloatVarRef fz;
-    you were working on getting hp ready
-        to scale down when hp is reduced
-        hp doesnt ahve calulcation on get damage
-        to update ui with set scale
-        it's to linked yet
+    public MultiVarToVector3Setter setter;
+    public bool useInUpdate = true;
+
     void Awake()
     {
         target.Value = transform;
+    }
+
+    private void Update()
+    {
+        if (useInUpdate)
+        {
+            SetToSelectedScale();
+        }
     }
 
     public void Next()
@@ -42,9 +46,10 @@ public class SetScale : MonoBehaviour
         {
             target.Value.localScale = relativeScales[active.Value];
         }
-        else if(usePrefabs.Value)
+        else
         {
-            target.Value.localScale = new Vector3(fx.Value, fy.Value, fz.Value);
+            setter.Activate();
+            target.Value.localScale = setter.VecValue;
         }
     }
 

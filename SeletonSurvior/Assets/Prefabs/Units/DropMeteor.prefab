@@ -70,10 +70,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e021b51aa3ab2f4c83a8db763dea70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: 1
+  maxHealth:
+    value: {fileID: 0}
+    useDefault: 1
+    defaultValue: 1
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
   OnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  checkEveryFrame: 1
 --- !u!114 &6701899061843271526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +163,7 @@ MonoBehaviour:
   rotationDeg: {x: 0, y: 0, z: 0}
   scaling: {x: 1, y: 1, z: 1}
   lastRot: {x: 0, y: 0, z: 0}
+  useDeltaTime: 1
   expectedMove:
     value: {fileID: 0}
     useDefault: 1
@@ -248,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dd578b501840841a023011ec736596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: -10
 --- !u!114 &6086075239959669698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dd578b501840841a023011ec736596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 5
 --- !u!114 &8707645197879852508
 MonoBehaviour:
   m_ObjectHideFlags: 0
