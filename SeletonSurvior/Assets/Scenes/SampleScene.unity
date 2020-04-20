@@ -1322,7 +1322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &417950547
 Transform:
   m_ObjectHideFlags: 0
@@ -2540,7 +2540,7 @@ MonoBehaviour:
   delays:
   - value: {fileID: 0}
     useDefault: 1
-    defaultValue: 7
+    defaultValue: 11
     log: 0
   activeDelay:
     value: {fileID: 0}
